@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Elegance</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html">Elegance</a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="collections.html" class="nav-link">Collections</a></li>
+          <li class="nav-item"><a href="bestsellers.html" class="nav-link">Bestsellers</a></li>
+          <li class="nav-item"><a href="bridal-sets.html" class="nav-link">Bridal Sets</a></li>
+          <li class="nav-item"><a href="festive-picks.html" class="nav-link">Festive Picks</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact & Support</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="wishlist.html" class="icon-link"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="icon-link cart-icon">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout-section">
+    <div class="container">
+      <h1 class="section-title">Checkout</h1>
+      
+      <!-- Checkout Progress -->
+      <div class="checkout-progress">
+        <div class="progress-step active" data-step="shipping">
+          <div class="step-number">1</div>
+          <div class="step-label">Shipping</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="payment">
+          <div class="step-number">2</div>
+          <div class="step-label">Payment</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="review">
+          <div class="step-number">3</div>
+          <div class="step-label">Review</div>
+        </div>
+      </div>
+      
+      <div class="checkout-content">
+        <!-- Checkout Form Container -->
+        <div class="checkout-form-container">
+          <!-- Shipping Form -->
+          <form id="shipping-form" class="checkout-form active">
+            <h2>Shipping Information</h2>
+            
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <input type="text" id="zipCode" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="AU">Australia</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="shippingMethod">Shipping Method</label>
+              <div class="shipping-options">
+                <div class="shipping-option">
+                  <input type="radio" id="standard" name="shippingMethod" value="standard" checked>
+                  <label for="standard">
+                    <span class="shipping-name">Standard Shipping</span>
+                    <span class="shipping-price">$9.99</span>
+                    <span class="shipping-time">5-7 business days</span>
+                  </label>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" id="express" name="shippingMethod" value="express">
+                  <label for="express">
+                    <span class="shipping-name">Express Shipping</span>
+                    <span class="shipping-price">$19.99</span>
+                    <span class="shipping-time">2-3 business days</span>
+                  </label>
+                </div>
+                
+                <div class="shipping-option">
+                  <input type="radio" id="overnight" name="shippingMethod" value="overnight">
+                  <label for="overnight">
+                    <span class="shipping-name">Overnight Shipping</span>
+                    <span class="shipping-price">$29.99</span>
+                    <span class="shipping-time">Next business day</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <a href="cart.html" class="btn btn-secondary">Back to Cart</a>
+              <button type="submit" class="btn btn-primary">Continue to Payment</button>
+            </div>
+          </form>
+          
+          <!-- Payment Form -->
+          <form id="payment-form" class="checkout-form">
+            <h2>Payment Information</h2>
+            
+            <div class="form-group">
+              <label for="cardName">Name on Card</label>
+              <input type="text" id="cardName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <div class="card-input-wrapper">
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                <div class="card-icons">
+                  <i class="fab fa-cc-visa"></i>
+                  <i class="fab fa-cc-mastercard"></i>
+                  <i class="fab fa-cc-amex"></i>
+                  <i class="fab fa-cc-discover"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="billingAddress">Billing Address</label>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="sameAsShipping" checked>
+                <label for="sameAsShipping">Same as shipping address</label>
+              </div>
+            </div>
+            
+            <div id="billing-address-fields" style="display: none;">
+              <!-- Billing address fields here -->
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" id="back-to-shipping">Back to Shipping</button>
+              <button type="submit" class="btn btn-primary">Review Order</button>
+            </div>
+          </form>
+          
+          <!-- Order Review -->
+          <div id="order-review" class="checkout-form">
+            <h2>Order Review</h2>
+            
+            <div class="review-section">
+              <h3>Shipping Information</h3>
+              <div id="review-shipping-info" class="review-info"></div>
+              <button class="btn btn-link edit-btn" data-edit="shipping">Edit</button>
+            </div>
+            
+            <div class="review-section">
+              <h3>Payment Information</h3>
+              <div id="review-payment-info" class="review-info"></div>
+              <button class="btn btn-link edit-btn" data-edit="payment">Edit</button>
+            </div>
+            
+            <div class="review-section">
+              <h3>Order Items</h3>
+              <div id="review-order-items" class="review-items"></div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" id="back-to-payment">Back to Payment</button>
+              <button type="button" class="btn btn-primary" id="place-order-btn">Place Order</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          
+          <div id="checkout-items" class="checkout-items">
+            <!-- Order items will be loaded here via JavaScript -->
+          </div>
+          
+          <div class="summary-item">
+            <span>Subtotal</span>
+            <span id="checkout-subtotal">$0.00</span>
+          </div>
+          
+          <div class="summary-item">
+            <span>Shipping</span>
+            <span id="checkout-shipping">$9.99</span>
+          </div>
+          
+          <div class="summary-item">
+            <span>Tax</span>
+            <span id="checkout-tax">$0.00</span>
+          </div>
+          
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="checkout-total">$0.00</span>
+          </div>
+          
+          <div class="summary-footer">
+            <p><i class="fas fa-lock"></i> Secure Checkout</p>
+            <div class="payment-methods">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Elegance</h3>
+          <p>Handcrafted jewelry for every occasion. Quality materials and unique designs.</p>
+          <div class="social-media">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="collections.html">All Collections</a></li>
+            <li><a href="bestsellers.html">Bestsellers</a></li>
+            <li><a href="bridal-sets.html">Bridal Sets</a></li>
+            <li><a href="festive-picks.html">Festive Picks</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping Information</a></li>
+            <li><a href="returns.html">Returns & Exchanges</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> support@elegance.com</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, New York, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Elegance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">Elegance</div>
+      <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><a href="collections.html" class="mobile-nav-link">Collections</a></li>
+      <li class="mobile-nav-item"><a href="bestsellers.html" class="mobile-nav-link">Bestsellers</a></li>
+      <li class="mobile-nav-item"><a href="bridal-sets.html" class="mobile-nav-link">Bridal Sets</a></li>
+      <li class="mobile-nav-item"><a href="festive-picks.html" class="mobile-nav-link">Festive Picks</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact & Support</a></li>
+    </ul>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal" id="order-confirmation-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Order Confirmation</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="confirmation-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Your Order!</h3>
+        <p>Your order has been placed successfully.</p>
+        <p>Order Number: <span id="order-number"></span></p>
+        <p>A confirmation email has been sent to <span id="confirmation-email"></span>.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

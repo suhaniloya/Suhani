@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Elegance</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html">Elegance</a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="collections.html" class="nav-link">Collections</a></li>
+          <li class="nav-item"><a href="bestsellers.html" class="nav-link">Bestsellers</a></li>
+          <li class="nav-item"><a href="bridal-sets.html" class="nav-link">Bridal Sets</a></li>
+          <li class="nav-item"><a href="festive-picks.html" class="nav-link">Festive Picks</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact & Support</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="wishlist.html" class="icon-link"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="icon-link cart-icon active">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <h1 class="section-title">Shopping Cart</h1>
+      
+      <div class="cart-content">
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items will be loaded here via JavaScript -->
+          <div class="empty-cart">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Your cart is empty</p>
+            <a href="collections.html" class="btn btn-primary">Continue Shopping</a>
+          </div>
+        </div>
+        
+        <div class="cart-summary">
+          <h2>Order Summary</h2>
+          
+          <div class="summary-item">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          
+          <div class="summary-item">
+            <span>Shipping</span>
+            <span id="cart-shipping">$0.00</span>
+          </div>
+          
+          <div class="summary-item">
+            <span>Tax</span>
+            <span id="cart-tax">$0.00</span>
+          </div>
+          
+          <div class="promo-code">
+            <input type="text" placeholder="Enter promo code">
+            <button class="btn btn-secondary">Apply</button>
+          </div>
+          
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          
+          <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+          
+          <div class="summary-footer">
+            <p><i class="fas fa-lock"></i> Secure Checkout</p>
+            <div class="payment-methods">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Elegance</h3>
+          <p>Handcrafted jewelry for every occasion. Quality materials and unique designs.</p>
+          <div class="social-media">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="collections.html">All Collections</a></li>
+            <li><a href="bestsellers.html">Bestsellers</a></li>
+            <li><a href="bridal-sets.html">Bridal Sets</a></li>
+            <li><a href="festive-picks.html">Festive Picks</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping Information</a></li>
+            <li><a href="returns.html">Returns & Exchanges</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> support@elegance.com</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, New York, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Elegance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">Elegance</div>
+      <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><a href="collections.html" class="mobile-nav-link">Collections</a></li>
+      <li class="mobile-nav-item"><a href="bestsellers.html" class="mobile-nav-link">Bestsellers</a></li>
+      <li class="mobile-nav-item"><a href="bridal-sets.html" class="mobile-nav-link">Bridal Sets</a></li>
+      <li class="mobile-nav-item"><a href="festive-picks.html" class="mobile-nav-link">Festive Picks</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact & Support</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart-page.js"></script>
+</body>
+</html>

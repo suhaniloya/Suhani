@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Elegance</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html">Elegance</a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="collections.html" class="nav-link">Collections</a></li>
+          <li class="nav-item"><a href="bestsellers.html" class="nav-link">Bestsellers</a></li>
+          <li class="nav-item"><a href="bridal-sets.html" class="nav-link">Bridal Sets</a></li>
+          <li class="nav-item"><a href="festive-picks.html" class="nav-link">Festive Picks</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact & Support</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="wishlist.html" class="icon-link"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="icon-link cart-icon">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Details -->
+  <section class="product-details">
+    <div class="container">
+      <div class="product-content">
+        <div class="product-gallery" id="product-gallery">
+          <!-- Product images will be loaded here via JavaScript -->
+        </div>
+        
+        <div class="product-info">
+          <h1 class="product-name" id="product-name"></h1>
+          
+          <div class="product-price" id="product-price">
+            <!-- Price information will be loaded here via JavaScript -->
+          </div>
+          
+          <div class="product-rating" id="product-rating">
+            <!-- Rating information will be loaded here via JavaScript -->
+          </div>
+          
+          <div class="product-short-description" id="product-short-description">
+            <!-- Short description will be loaded here via JavaScript -->
+          </div>
+          
+          <div class="product-full-description" id="product-full-description">
+            <!-- Full description will be loaded here via JavaScript -->
+          </div>
+          
+          <div class="product-quantity">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-selector">
+              <button class="quantity-btn decrease">-</button>
+              <input type="number" id="quantity" value="1" min="1" max="99">
+              <button class="quantity-btn increase">+</button>
+            </div>
+          </div>
+          
+          <div class="product-actions">
+            <button class="btn btn-primary" id="add-to-cart-btn">Add to Cart</button>
+            <button class="btn btn-secondary" id="buy-now-btn">Buy Now</button>
+            <button class="btn btn-wishlist" id="add-to-wishlist-btn">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          
+          <div class="product-meta">
+            <div class="meta-item">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Free shipping on orders over $50</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-exchange-alt"></i>
+              <span>30-day returns</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure checkout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Similar Products -->
+      <div class="similar-products">
+        <h2 class="section-title">You May Also Like</h2>
+        <div class="products-grid" id="similar-products-grid">
+          <!-- Similar products will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Elegance</h3>
+          <p>Handcrafted jewelry for every occasion. Quality materials and unique designs.</p>
+          <div class="social-media">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="collections.html">All Collections</a></li>
+            <li><a href="bestsellers.html">Bestsellers</a></li>
+            <li><a href="bridal-sets.html">Bridal Sets</a></li>
+            <li><a href="festive-picks.html">Festive Picks</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="shipping.html">Shipping Information</a></li>
+            <li><a href="returns.html">Returns & Exchanges</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> support@elegance.com</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, New York, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Elegance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">Elegance</div>
+      <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><a href="collections.html" class="mobile-nav-link">Collections</a></li>
+      <li class="mobile-nav-item"><a href="bestsellers.html" class="mobile-nav-link">Bestsellers</a></li>
+      <li class="mobile-nav-item"><a href="bridal-sets.html" class="mobile-nav-link">Bridal Sets</a></li>
+      <li class="mobile-nav-item"><a href="festive-picks.html" class="mobile-nav-link">Festive Picks</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact & Support</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/product.js"></script>
+</body>
+</html>

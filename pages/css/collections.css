@@ -1,0 +1,106 @@
+/* General container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Page Banner */
+  .page-banner {
+    background: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .page-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .page-banner p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  /* Collections Grid */
+  .collections-container {
+    padding: 60px 20px;
+  }
+  
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Individual Collection Card */
+  .collection-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  
+  .collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .collection-card img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .collection-card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .collection-card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+  
+  .collection-card-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Wishlist icon on card */
+  .wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .wishlist-icon:hover {
+    background: #ffc0cb;
+    color: #fff;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .page-banner h1 {
+      font-size: 36px;
+    }
+    .collections-container {
+      padding: 40px 15px;
+    }
+  }
+  

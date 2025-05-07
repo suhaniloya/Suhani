@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O'Kishori - Handcrafted Jewelry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+      const username = localStorage.getItem("username");
+      const loginButton = document.getElementById("login-button");
+
+      if (isLoggedIn && username && loginButton) {
+        // Update button to show logged in state
+        loginButton.innerHTML = `<i class="fas fa-user"></i> ${username}`;
+
+        // Add logout functionality
+        loginButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          const confirmLogout = confirm("Do you want to log out?");
+
+          if (confirmLogout) {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("username");
+            window.location.reload();
+          }
+        });
+      }
+    });
+  </script>
+  <body>
+    <!-- Header -->
+    <!-- Header for index.html with Login Button -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">O'Kishori</a>
+        </div>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/collections.html" class="nav-link">Collections</a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/bestsellers.html" class="nav-link">Bestsellers</a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/bridal-sets.html" class="nav-link">Bridal Sets</a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/festive-picks.html" class="nav-link"
+                >Festive Picks</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="pages/contact.html" class="nav-link"
+                >Contact & Support</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <a
+            href="pages/login.html"
+            id="login-button"
+            class="btn btn-outline login-btn"
+            ><i class="fas fa-user"></i> Login</a
+          >
+          <a href="pages/wishlist.html" class="icon-link"
+            ><i class="fas fa-heart"></i
+          ></a>
+          <a href="pages/cart.html" class="icon-link cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Handcrafted Elegance</h1>
+          <p>Traditional beauty meets modern design</p>
+          <a href="pages/collections.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="products-grid" id="featured-products-grid">
+          <!-- Products will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <div class="container">
+        <h2 class="section-title">Our Collections</h2>
+        <div class="categories-grid">
+          <a
+            href="pages/collections.html?category=padmika"
+            class="category-card"
+          >
+            <div class="category-image">
+              <img
+                src="images/collections/padmika_collection.jpg"
+                alt="Padmika Collection"
+              />
+            </div>
+            <h3>Padmika Collection</h3>
+          </a>
+          <a href="pages/collections.html?category=surya" class="category-card">
+            <div class="category-image">
+              <img
+                src="images/collections/surya_collection.jpg"
+                alt="Surya Collection"
+              />
+            </div>
+            <h3>Surya Collection</h3>
+          </a>
+          <a
+            href="pages/collections.html?category=neelambari"
+            class="category-card"
+          >
+            <div class="category-image">
+              <img
+                src="images/collections/neelambari_collection.jpg"
+                alt="Neelambari Collection"
+              />
+            </div>
+            <h3>Neelambari Collection</h3>
+          </a>
+          <a href="pages/bridal-sets.html" class="category-card">
+            <div class="category-image">
+              <img src="images/collections/bridal_sets.jpg" alt="Bridal Sets" />
+            </div>
+            <h3>Bridal Sets</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">About O'Kishori</h2>
+        <div class="about-content">
+          <p>
+            Welcome to O'Kishori! We are all about handcrafted elegance,
+            tradition, and a touch of modern flair. Every piece tells a story of
+            love, craftsmanship, and timeless beauty. Inspired by India's rich
+            cultural heritage, we blend Indian and Western styles, creating
+            unique, customisable jewellery that speaks to your heart.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Join Our Newsletter</h2>
+          <p>
+            Subscribe to receive updates on new collections and exclusive
+            offers.
+          </p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>O'Kishori</h3>
+            <p>
+              Handcrafted jewelry for every occasion. Quality materials and
+              unique designs.
+            </p>
+            <div class="social-media">
+              <a
+                href="https://www.facebook.com/61572445945755/"
+                class="social-link"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/okishori._"
+                class="social-link"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Shop</h3>
+            <ul class="footer-links">
+              <li><a href="pages/collections.html">All Collections</a></li>
+              <li><a href="pages/bestsellers.html">Bestsellers</a></li>
+              <li><a href="pages/bridal-sets.html">Bridal Sets</a></li>
+              <li><a href="pages/festive-picks.html">Festive Picks</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Help</h3>
+            <ul class="footer-links">
+              <li><a href="pages/contact.html">Contact Us</a></li>
+              <li><a href="pages/shipping.html">Shipping Information</a></li>
+              <li><a href="pages/returns.html">Returns & Exchanges</a></li>
+              <li><a href="pages/faq.html">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="contact-info">
+              <li><i class="fas fa-envelope"></i> okishori.brand@gmail.com</li>
+              <li><i class="fas fa-phone"></i> +91 87673 48532</li>
+              <li><i class="fas fa-phone"></i> +91 93267 25935</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 O'Kishori. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Navigation Menu -->
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
